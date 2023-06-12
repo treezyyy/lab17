@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         String regex1 = "-?\\d+";
         String regex2 = "[-+*/]";
-        Scanner sc = new Scanner(System.in);
         System.out.println("Введите первое число");
         String FirstNumber = CheckInt(regex1);
         System.out.println("Введите второе число");
