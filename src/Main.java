@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,14 +14,10 @@ public class Main {
         String SecondNumber = CheckInt(regex1);
         System.out.println("Введите операцию");
         String Operation = CheckOperation(regex2);
-        String num = FirstNumber + Operation + SecondNumber;
-        System.out.println(calculate(num));
+        List<String> strList1 = new ArrayList<>(Arrays.asList(FirstNumber, Operation, SecondNumber));
+        System.out.println(calculate(strList1));
     }
-    public static Double calculate(String numer){
-        List<String> strList = new ArrayList<>();
-        for (String listElement : numer.split("")) {
-            strList.add(listElement);
-        }
+    public static Double calculate(List<String> strList){
         switch (strList.get(1)){
             case "+":
                 double result = Integer.parseInt(strList.get(0)) +  Integer.parseInt(strList.get(2));
